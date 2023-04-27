@@ -48,8 +48,8 @@ class Page extends ConsumerWidget {
             Text("list: ${ref.watch(listStateProvider)}"),
             Text("selected: ${ref.watch(selectedTextStateProvider)}"),
             DropdownMenu<String>(
+              key: UniqueKey(),
               label: const Text("Text"),
-              // Ref watch no working.
               dropdownMenuEntries: ref.watch(listStateProvider).map((text) => DropdownMenuEntry<String>(
                 value: text,
                 label: text,
